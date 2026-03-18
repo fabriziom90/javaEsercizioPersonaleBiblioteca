@@ -36,6 +36,11 @@ public class Libro extends ElementoBiblioteca{
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
+
+	@Override
+	public String toString() {
+		return "Libro [id="+super.getId()+", titolo="+super.getTitolo()+", autore=" + autore + ", numeroPagine=" + numeroPagine + ", isbn=" + isbn + "]";
+	}
 	
 	
 }
