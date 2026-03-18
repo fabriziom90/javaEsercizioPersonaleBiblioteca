@@ -1,9 +1,12 @@
 package model;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 public class Utente extends Persona{
 	private String codiceUtente;
+	private List<Prestito> listaPrestiti = new ArrayList<Prestito>();
 	
 	public Utente(int id, String nome, String cognome, String email) {
 		super(id, nome, cognome, email);
