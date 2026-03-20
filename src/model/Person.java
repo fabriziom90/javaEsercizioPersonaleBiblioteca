@@ -2,6 +2,8 @@ package model;
 
 public abstract class Person {
 	
+	
+
 	private static int nextId;
 	private int id;
 	private String name;
@@ -14,6 +16,14 @@ public abstract class Person {
 		this.name = name;
 		this.surname = surname;
 		this.email = email;
+	}
+	
+	public static int getNextId() {
+		return nextId;
+	}
+
+	public int getId() {
+		return id;
 	}
 
 	public String getName() {
