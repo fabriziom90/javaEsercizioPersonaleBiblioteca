@@ -10,6 +10,7 @@ public class Book {
 	private boolean available;
 	
 	public Book(String title, String author, String isbn, int year, boolean available) {
+		this.id = nextId++;
 		this.title = title;
 		this.author = author;
 		this.isbn = isbn;
@@ -77,12 +78,7 @@ public class Book {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((author == null) ? 0 : author.hashCode());
-		result = prime * result + (available ? 1231 : 1237);
-		result = prime * result + id;
 		result = prime * result + ((isbn == null) ? 0 : isbn.hashCode());
-		result = prime * result + ((title == null) ? 0 : title.hashCode());
-		result = prime * result + year;
 		return result;
 	}
 
@@ -95,27 +91,13 @@ public class Book {
 		if (getClass() != obj.getClass())
 			return false;
 		Book other = (Book) obj;
-		if (author == null) {
-			if (other.author != null)
-				return false;
-		} else if (!author.equals(other.author))
-			return false;
-		if (available != other.available)
-			return false;
-		if (id != other.id)
-			return false;
+		
 		if (isbn == null) {
 			if (other.isbn != null)
 				return false;
 		} else if (!isbn.equals(other.isbn))
 			return false;
-		if (title == null) {
-			if (other.title != null)
-				return false;
-		} else if (!title.equals(other.title))
-			return false;
-		if (year != other.year)
-			return false;
+		
 		return true;
 	}
 

@@ -26,6 +26,7 @@ public class LibrarianDao implements Storage<Librarian> {
 	public boolean add(Librarian u) {
 		if(!librarianList.contains(u)) {			
 			librarianList.add(u);
+			return true;
 		}
 		return false;
 	}
@@ -34,9 +35,9 @@ public class LibrarianDao implements Storage<Librarian> {
 	public boolean update(Librarian librarian) {
 		Librarian toUpdateLibrarian = librarianList.stream().filter(l -> l.getId() == librarian.getId()).findFirst().orElse(null);
 		if(toUpdateLibrarian != null) {
-			librarian.setName(librarian.getName());
-			librarian.setSurname(librarian.getSurname());
-			librarian.setEmail(librarian.getEmail());
+			toUpdateLibrarian.setName(librarian.getName());
+			toUpdateLibrarian.setSurname(librarian.getSurname());
+			toUpdateLibrarian.setEmail(librarian.getEmail());
 			return true;
 		}
 		

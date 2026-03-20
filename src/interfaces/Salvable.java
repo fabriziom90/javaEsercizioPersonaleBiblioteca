@@ -1,6 +1,8 @@
 package interfaces;
 
-public interface Salvable {
-	public void addToFile();
+import java.util.List;
+
+public interface Salvable<T> {
+	public void writeToFile(List<T> elem);
 	public void readFromFile();
 }

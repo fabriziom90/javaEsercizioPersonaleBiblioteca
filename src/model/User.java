@@ -30,7 +30,7 @@ public class User extends Person{
 				+ "Nome: "+super.getName()+"\n"
 				+ "Cognome: "+super.getSurname()+"\n"
 				+ "Email: "+super.getEmail()+"\n"
-				+ "Id Carta: "+this.cardId+"\n\n";
+				+ "Id Carta: "+this.cardId;
 	}
 	@Override
 	public int hashCode() {
