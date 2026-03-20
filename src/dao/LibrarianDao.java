@@ -5,7 +5,6 @@ import java.util.List;
 
 import interfaces.Storage;
 import model.Librarian;
-import model.Librarian;
 
 public class LibrarianDao implements Storage<Librarian> {
 	List<Librarian> librarianList = new ArrayList<Librarian>();
